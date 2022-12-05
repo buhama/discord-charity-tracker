@@ -5,6 +5,11 @@
         "src": "api/bot.mjs",
         "use": "@vercel/node"
       }
+    ],
+    "routes": [
+      {
+        "src": "package.json",
+        "dest": "api/package.json"
+      }
     ]
   }
-  
