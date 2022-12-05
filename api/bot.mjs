@@ -7,14 +7,14 @@ export default function bot(req, res) {
 
   client.on('ready', () => {
       console.log(`Logged in as ${client?.user?.tag}!`);
-      const channel = client.channels.cache.get('235211165922230272');
+      const channel = client.channels.cache.get('833584203344904215');
       // Send initial message
       // lastMessage = channel.send('User: owed amount\n@user1: $0\n@user2: $0');
 
       // Set up event handler for messages in the channel
       client.on('messageCreate', msg => {
         console.log('message', msg);
-        if (msg.channel.id === '235211165922230272') {
+        if (msg.channel.id === '235211165922230272' || msg.channel.id === '833584203344904215') {
           console.log('where', msg.content);
           // Check if the message is of the format +5_taggeduser
           if (msg.content === '#showcharity'){
